@@ -1,0 +1,26 @@
+.list {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+.link {
+  display: inline-block;
+  padding: 1rem 2rem;
+  margin-top: 1rem;
+  border-radius: 25px;
+  background-color: white;
+  color: black;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 200ms;
+}
+
+.link:hover {
+  background-color: green;
+}
+
+.link:focus-visible {
+  outline: 2px solid blue;
+  outline-offset: 4px;
+}
