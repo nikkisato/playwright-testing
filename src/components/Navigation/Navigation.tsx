@@ -5,6 +5,7 @@ export default function Navigation() {
     <ul className={styles.list}>
       <li>
         <a
+          data-testid="homepage-link"
           className={styles.link}
           href="/"
         >
@@ -13,6 +14,7 @@ export default function Navigation() {
       </li>
       <li>
         <a
+          data-testid="feature-link"
           className={styles.link}
           href="/feature"
         >
@@ -21,6 +23,7 @@ export default function Navigation() {
       </li>
       <li>
         <a
+          data-testid="contact-link"
           className={styles.link}
           href="/contact"
         >
