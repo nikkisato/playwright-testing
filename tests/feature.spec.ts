@@ -6,7 +6,7 @@ test.describe('Feature Link from Homepage', () => {
     await page.goto('/');
   });
 
-  test('Access Feature Button using keyboard tab', async ({ page }) => {
+  test('Access Feature Button using keyboard tab', async ({ page, baseURL }) => {
     // go to the page
     await page.goto('/');
 
@@ -22,17 +22,17 @@ test.describe('Feature Link from Homepage', () => {
     await featureLink.press('Enter');
 
     // this will lead us to the Feature Page!
-    expect(page.url()).toBe('/feature');
+    expect(page.url()).toBe(`${baseURL}/feature`);
   });
 });
 
 // Test the Feature Link is present
 test.describe('Feature Link from Contact', () => {
-  test('Access Contact Page', async ({ page }) => {
-    await page.goto('/contact');
+  test('Access Contact Page', async ({ page, baseURL }) => {
+    await page.goto(`${baseURL}/contact`);
   });
 
-  test('Access Contact Button using keyboard tab', async ({ page }) => {
+  test('Access Contact Button using keyboard tab', async ({ page, baseURL }) => {
     // go to the page
     await page.goto('/contact');
 
@@ -48,6 +48,6 @@ test.describe('Feature Link from Contact', () => {
     await contactLink.press('Enter');
 
     // this will lead us to the Feature Page!
-    expect(page.url()).toBe('/contact');
+    expect(page.url()).toBe(`${baseURL}/contact`);
   });
 });

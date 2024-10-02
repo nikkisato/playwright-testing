@@ -14,6 +14,7 @@
     "@axe-core/playwright": "^4.9.1",
     "@chromatic-com/playwright": "^0.9.0",
     "@playwright/test": "^1.45.3",
+    "chromatic": "^11.11.0",
     "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18"

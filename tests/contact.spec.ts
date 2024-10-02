@@ -2,11 +2,11 @@ import { test, expect } from '@chromatic-com/playwright';
 
 // Test the Contact Link is present
 test.describe('Contact Link from Homepage', () => {
-  test('Access Homepage', async ({ page }) => {
+  test('Access Homepage', async ({ page, baseURL }) => {
     await page.goto('/');
   });
 
-  test('Access Contact Button using keyboard tab', async ({ page }) => {
+  test('Access Contact Button using keyboard tab', async ({ page, baseURL }) => {
     // go to the page
     await page.goto('/');
 
@@ -22,7 +22,7 @@ test.describe('Contact Link from Homepage', () => {
     await contactLink.press('Enter');
 
     // this will lead us to the Contact Page!
-    expect(page.url()).toBe('/contact');
+    expect(page.url()).toBe(`${baseURL}/contact`);
   });
 });
 
@@ -32,7 +32,7 @@ test.describe('Contact Link from Feature', () => {
     await page.goto('/feature');
   });
 
-  test('Access Contact Button using keyboard tab', async ({ page }) => {
+  test('Access Contact Button using keyboard tab', async ({ page, baseURL }) => {
     // go to the page
     await page.goto('/feature');
 
@@ -48,6 +48,6 @@ test.describe('Contact Link from Feature', () => {
     await contactLink.press('Enter');
 
     // this will lead us to the Contact Page!
-    expect(page.url()).toBe('/contact');
+    expect(page.url()).toBe(`${baseURL}/contact`);
   });
 });

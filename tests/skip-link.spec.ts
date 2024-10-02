@@ -7,7 +7,7 @@ test.describe('Skip Link', () => {
     await page.getByTestId('main');
   });
 
-  test('Access skip link using keyboard tab', async ({ page }) => {
+  test('Access skip link using keyboard tab', async ({ page, baseURL }) => {
     // go to the page
     await page.goto('/');
 
@@ -23,6 +23,6 @@ test.describe('Skip Link', () => {
     await skipLink.press('Enter');
 
     // this will lead us to the main Content!
-    expect(page.url()).toBe('/#main');
+    expect(page.url()).toBe(`${baseURL}/#main`);
   });
 });
