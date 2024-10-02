@@ -1,15 +1,15 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from '@chromatic-com/playwright';
 
 // Test the Main Tag is present
 test.describe('Skip Link', () => {
   test('get Main Link', async ({ page }) => {
-    await page.goto('http://localhost:3000/');
+    await page.goto('/');
     await page.getByTestId('main');
   });
 
-  test('Access skip link using keyboard tab', async ({ page }) => {
+  test('Access skip link using keyboard tab', async ({ page, baseURL }) => {
     // go to the page
-    await page.goto('http://localhost:3000/');
+    await page.goto('/');
 
     // Hit Tab Key
     await page.keyboard.press('Tab');
@@ -23,6 +23,6 @@ test.describe('Skip Link', () => {
     await skipLink.press('Enter');
 
     // this will lead us to the main Content!
-    expect(page.url()).toBe('http://localhost:3000/#main');
+    expect(page.url()).toBe(`${baseURL}/#main`);
   });
 });
