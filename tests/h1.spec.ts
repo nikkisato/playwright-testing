@@ -1,7 +1,7 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from '@chromatic-com/playwright';
 
 test('page has an H1', async ({ page }) => {
-  await page.goto('http://localhost:3000/');
+  await page.goto('/');
 
   const response = await page.waitForSelector('h1');
 

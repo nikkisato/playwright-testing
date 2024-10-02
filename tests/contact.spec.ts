@@ -1,14 +1,14 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from '@chromatic-com/playwright';
 
 // Test the Contact Link is present
 test.describe('Contact Link from Homepage', () => {
   test('Access Homepage', async ({ page }) => {
-    await page.goto('http://localhost:3000/');
+    await page.goto('/');
   });
 
   test('Access Contact Button using keyboard tab', async ({ page }) => {
     // go to the page
-    await page.goto('http://localhost:3000/');
+    await page.goto('/');
 
     // Hit Tab Key
     await page.keyboard.press('Tab');
@@ -22,19 +22,19 @@ test.describe('Contact Link from Homepage', () => {
     await contactLink.press('Enter');
 
     // this will lead us to the Contact Page!
-    expect(page.url()).toBe('http://localhost:3000/contact');
+    expect(page.url()).toBe('/contact');
   });
 });
 
 // Test the Feature Link is present
 test.describe('Contact Link from Feature', () => {
   test('Access Feature Page', async ({ page }) => {
-    await page.goto('http://localhost:3000/feature');
+    await page.goto('/feature');
   });
 
   test('Access Contact Button using keyboard tab', async ({ page }) => {
     // go to the page
-    await page.goto('http://localhost:3000/feature');
+    await page.goto('/feature');
 
     // Hit Tab Key
     await page.keyboard.press('Tab');
@@ -48,6 +48,6 @@ test.describe('Contact Link from Feature', () => {
     await contactLink.press('Enter');
 
     // this will lead us to the Contact Page!
-    expect(page.url()).toBe('http://localhost:3000/contact');
+    expect(page.url()).toBe('/contact');
   });
 });

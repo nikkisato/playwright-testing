@@ -1,7 +1,7 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from '@chromatic-com/playwright';
 
 test('html has a lang attribute', async ({ page }) => {
-  await page.goto('http://localhost:3000/');
+  await page.goto('/');
 
   // Wait for the HTML element to appear on the page
   const htmlElement = await page.waitForSelector('html');
