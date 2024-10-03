@@ -65,7 +65,7 @@ export default defineConfig({
     /* Test against branded browsers. */
     {
       name: 'Microsoft Edge',
-      use: { ...devices['Desktop Edge'], channel: 'edge' },
+      use: { ...devices['Desktop Edge'] },
     },
     {
       name: 'Google Chrome',
