@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "test": "playwright test",
-    "test:ui": "playwright test --ui"
+    "test:ui": "playwright test --ui",
+    "test:playwright": "playwright test --reporter=html",
+    "deploy:report": "npm run test:playwright && cp -r playwright-report/* public/playwright-report/ && vercel --prod"
   },
   "dependencies": {
     "@axe-core/playwright": "^4.9.1",

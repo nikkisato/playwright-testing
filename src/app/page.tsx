@@ -1,6 +1,6 @@
 import styles from './page.module.css';
-import Navigation from '../components/Navigation/Navigation';
-import SkipLink from '../components/SkipLink/SkipLink';
+import Navigation from '@/components/Navigation/Navigation';
+import SkipLink from '@/components/SkipLink/SkipLink';
 
 export default function Home() {
   return (
