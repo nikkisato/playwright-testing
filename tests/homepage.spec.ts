@@ -22,7 +22,7 @@ test.describe('Homepage from Feature', () => {
     await homePageLink.press('Enter');
 
     // this will lead us to the Homepage Page!
-    expect(page.url()).toBe('/');
+    expect(page.url()).toBe(`${baseURL}/`);
   });
 });
 
@@ -48,6 +48,6 @@ test.describe('Homepage from Contact', () => {
     await homePageLink.press('Enter');
 
     // this will lead us to the Feature Page!
-    expect(page.url()).toBe('/');
+    expect(page.url()).toBe(`${baseURL}/`);
   });
 });

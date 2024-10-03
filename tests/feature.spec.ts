@@ -2,13 +2,13 @@ import { test, expect } from '@chromatic-com/playwright';
 
 // Test the Feature Link is present
 test.describe('Feature Link from Homepage', () => {
-  test('Access Homepage', async ({ page }) => {
-    await page.goto('/');
+  test('Access Homepage', async ({ page, baseURL }) => {
+    await page.goto(`${baseURL}`);
   });
 
   test('Access Feature Button using keyboard tab', async ({ page, baseURL }) => {
     // go to the page
-    await page.goto('/');
+    await page.goto(`${baseURL}`);
 
     // Hit Tab Key
     await page.keyboard.press('Tab');

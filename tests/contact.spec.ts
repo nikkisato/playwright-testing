@@ -8,7 +8,7 @@ test.describe('Contact Link from Homepage', () => {
 
   test('Access Contact Button using keyboard tab', async ({ page, baseURL }) => {
     // go to the page
-    await page.goto('/');
+    await page.goto(`${baseURL}`);
 
     // Hit Tab Key
     await page.keyboard.press('Tab');

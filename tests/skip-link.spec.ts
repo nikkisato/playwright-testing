@@ -2,14 +2,14 @@ import { test, expect } from '@chromatic-com/playwright';
 
 // Test the Main Tag is present
 test.describe('Skip Link', () => {
-  test('get Main Link', async ({ page }) => {
-    await page.goto('/');
+  test('get Main Link', async ({ page, baseURL }) => {
+    await page.goto(`${baseURL}`);
     await page.getByTestId('main');
   });
 
   test('Access skip link using keyboard tab', async ({ page, baseURL }) => {
     // go to the page
-    await page.goto('/');
+    await page.goto(`${baseURL}`);
 
     // Hit Tab Key
     await page.keyboard.press('Tab');
