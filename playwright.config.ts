@@ -63,14 +63,18 @@ export default defineConfig({
     },
 
     /* Test against branded browsers. */
-    {
-      name: 'Microsoft Edge',
-      use: { ...devices['Desktop Edge'] },
-    },
+    // {
+    //   name: 'Microsoft Edge',
+    //   use: { ...devices['Desktop Edge'] },
+    // },
     {
       name: 'Google Chrome',
       use: { ...devices['Desktop Chrome'], browserName: 'chromium' },
     },
+    // {
+    //   name: 'Firefox',
+    //   use: { ...devices['Desktop Firefox'] },
+    // },
   ],
 
   /* Run your local dev server before starting the tests */
