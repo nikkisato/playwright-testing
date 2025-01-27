@@ -1,6 +1,13 @@
 name: "Chromatic"
 
-on: push
+on:
+  push:
+    branches:
+      - main     # Runs on pushes to the main branch
+  pull_request:   # Runs on pull requests
+    branches:
+      - main
+
 
 jobs:
   playwright:
@@ -33,10 +40,12 @@ jobs:
     name: Run Chromatic
     needs: playwright
     runs-on: ubuntu-latest
-      deploy:
+  # This job runs on pushes to the main branch only
+  deploy:
     name: Deploy Report
     needs: chromatic
     runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     steps:
       - uses: actions/checkout@v4
         with:
