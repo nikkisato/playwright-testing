@@ -35,6 +35,8 @@ export default function Navigation() {
           data-testid="playwright-report"
           className={styles.link}
           href="/playwright-report"
+          target="_blank"
+          rel="noreferrer"
         >
           Playwright Report
         </a>
