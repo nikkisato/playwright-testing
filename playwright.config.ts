@@ -28,7 +28,7 @@ export default defineConfig({
 
     baseURL:
       process.env.PLAYWRIGHT_BASE_URL ||
-      'https://playwright-testing-tau.vercel.app' ||
+      'https://playwright-testing-website.vercel.app' ||
       'http://localhost:3000',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
