@@ -1,0 +1,25 @@
+{"version":7,"type":"context-options","origin":"testRunner","browserName":"","options":{},"platform":"darwin","wallTime":1738035517239,"monotonicTime":3843.7690000000002,"sdkLanguage":"javascript"}
+{"type":"before","callId":"hook@1","startTime":3844.3469999999998,"class":"Test","method":"step","apiName":"Before Hooks","params":{},"stack":[]}
+{"type":"before","callId":"fixture@2","parentId":"hook@1","startTime":3845.34,"class":"Test","method":"step","apiName":"fixture: context","params":{},"stack":[]}
+{"type":"before","callId":"pw:api@3","parentId":"fixture@2","startTime":3846.724,"class":"Test","method":"step","apiName":"browser.newContext","params":{"acceptDownloads":"accept","bypassCSP":"false","colorScheme":"light","deviceScaleFactor":"1","hasTouch":"false","ignoreHTTPSErrors":"false","isMobile":"false","javaScriptEnabled":"true","locale":"en-US","offline":"false","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:130.0) Gecko/20100101 Firefox/130.0","viewport":"Object","baseURL":"https://playwright-testing-website.vercel.app","serviceWorkers":"allow","noDefaultViewport":"false","extraHTTPHeaders":"undefined","storageState":"undefined","recordHar":"undefined","reducedMotion":"undefined","forcedColors":"undefined","clientCertificates":"undefined"},"stack":[]}
+{"type":"after","callId":"pw:api@3","endTime":3850.178,"attachments":[]}
+{"type":"after","callId":"fixture@2","endTime":3856.0950000000003,"attachments":[]}
+{"type":"before","callId":"fixture@4","parentId":"hook@1","startTime":3856.322,"class":"Test","method":"step","apiName":"fixture: page","params":{},"stack":[]}
+{"type":"before","callId":"pw:api@5","parentId":"fixture@4","startTime":3857.031,"class":"Test","method":"step","apiName":"browserContext.newPage","params":{},"stack":[]}
+{"type":"after","callId":"pw:api@5","endTime":4058.519,"attachments":[]}
+{"type":"after","callId":"fixture@4","endTime":4058.648,"attachments":[]}
+{"type":"before","callId":"fixture@6","parentId":"hook@1","startTime":4059.503,"class":"Test","method":"step","apiName":"fixture: chromaticSnapshot","params":{},"stack":[{"file":"/Users/Nikki/personal-projects/playwright-testing/node_modules/@chromatic-com/playwright/dist/index.js","line":22,"column":1480}]}
+{"type":"after","callId":"fixture@6","endTime":4059.715,"attachments":[]}
+{"type":"after","callId":"hook@1","endTime":4059.762,"attachments":[]}
+{"type":"before","callId":"pw:api@7","startTime":4061.401,"class":"Test","method":"step","apiName":"page.goto","params":{"url":"https://playwright-testing-website.vercel.app","waitUntil":"load"},"stack":[{"file":"/Users/Nikki/personal-projects/playwright-testing/tests/feature.spec.ts","line":6,"column":16}]}
+{"type":"after","callId":"pw:api@7","endTime":4328.225,"attachments":[]}
+{"type":"before","callId":"hook@8","startTime":4328.434,"class":"Test","method":"step","apiName":"After Hooks","params":{},"stack":[]}
+{"type":"before","callId":"fixture@9","parentId":"hook@8","startTime":4328.638,"class":"Test","method":"step","apiName":"fixture: chromaticSnapshot","params":{},"stack":[{"file":"/Users/Nikki/personal-projects/playwright-testing/node_modules/@chromatic-com/playwright/dist/index.js","line":22,"column":1480}]}
+{"type":"after","callId":"fixture@9","endTime":4328.664,"attachments":[]}
+{"type":"before","callId":"fixture@10","parentId":"hook@8","startTime":4329.016,"class":"Test","method":"step","apiName":"fixture: page","params":{},"stack":[]}
+{"type":"after","callId":"fixture@10","endTime":4329.142,"attachments":[]}
+{"type":"before","callId":"fixture@11","parentId":"hook@8","startTime":4329.593,"class":"Test","method":"step","apiName":"fixture: context","params":{},"stack":[]}
+{"type":"after","callId":"fixture@11","endTime":4329.636,"attachments":[]}
+{"type":"after","callId":"hook@8","endTime":4375.904,"attachments":[]}
+{"type":"before","callId":"attach@12","startTime":4401.492,"class":"Test","method":"step","apiName":"attach \"trace\"","params":{},"stack":[]}
+{"type":"after","callId":"attach@12","endTime":4401.565,"attachments":[]}
