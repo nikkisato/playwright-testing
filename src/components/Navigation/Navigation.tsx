@@ -30,6 +30,17 @@ export default function Navigation() {
           Contact
         </a>
       </li>
+      <li>
+        <a
+          data-testid="playwright-report"
+          className={styles.link}
+          href="/playwright-report"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Playwright Report
+        </a>
+      </li>
     </ul>
   );
 }
