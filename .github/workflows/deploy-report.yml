@@ -1,13 +1,9 @@
-name: Deploy Report
-
+name: Playwright Tests
 on:
   push:
-    branches:
-      - main
+    branches: [main, master]
   pull_request:
-    branches:
-      - main
-
+    branches: [main, master]
 jobs:
   test:
     timeout-minutes: 60
@@ -23,12 +19,11 @@ jobs:
         run: npx playwright install --with-deps
       - name: Run Playwright tests
         run: npx playwright test
-      - name: Deploy report
-        run: npm run deploy:report
-        if: success()
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
         with:
           name: playwright-report
           path: playwright-report/
           retention-days: 30
+      - name: Deploy Report to Vercel
+        run: npm run deploy:report
