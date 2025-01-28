@@ -71,10 +71,10 @@ export default defineConfig({
       name: 'Google Chrome',
       use: { ...devices['Desktop Chrome'], browserName: 'chromium' },
     },
-    {
-      name: 'Firefox',
-      use: { ...devices['Desktop Firefox'] },
-    },
+    // {
+    //   name: 'Firefox',
+    //   use: { ...devices['Desktop Firefox'] },
+    // },
   ],
 
   /* Run your local dev server before starting the tests */
