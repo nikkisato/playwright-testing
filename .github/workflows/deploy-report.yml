@@ -37,3 +37,5 @@ jobs:
           retention-days: 30
       - name: Deploy Report to Vercel
         run: npm run deploy:report
+        env:
+          HOME: /root # Set the HOME environment variable
